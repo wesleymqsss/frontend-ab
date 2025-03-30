@@ -7,7 +7,7 @@
 
       </div>
       <div class="table">
-         <mat-form-field>
+         <mat-form-field class="custom-input">
             <mat-label>Filtrar</mat-label>
             <input matInput (keyup)="applyFilter($event)" placeholder="Ex: Nome" #input>
          </mat-form-field>
@@ -50,8 +50,8 @@
                   <td mat-cell *matCellDef="let row"> {{row.tipo_doacao}} </td>
                </ng-container>
 
-               <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-               <tr mat-row *matRowDef="let row; columns: displayedColumns; " (click)="openDialog('200ms', '150ms', row.cpfOrCnpj)"></tr>
+               <tr  class="tr-header" mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+               <tr  class="tr-body" mat-row  *matRowDef="let row; columns: displayedColumns; " (click)="openDialog('200ms', '150ms', row.cpfOrCnpj)"></tr>
 
                <tr class="mat-row" *matNoDataRow>
                   <td class="mat-cell" colspan="4">Não há dados para o filtro selecionado "{{input.value}}"</td>
