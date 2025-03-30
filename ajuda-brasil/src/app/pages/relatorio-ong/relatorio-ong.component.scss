@@ -1,0 +1,26 @@
+.container-ong {
+    width: 98%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    padding: 1%;
+
+}
+
+.table {
+     width: 100%;
+    
+}
+
+.container-table-component {
+    max-width: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+mat-form-field {
+    width: 40%;
+    height: 65px;
+}
