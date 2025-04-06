@@ -1,3 +1,41 @@
 <div class="form-container">
-    
+    <div class="form">
+        <div class="form-header">
+            <span class="span-header"> Realizar Cadastro </span>
+        </div>
+        <form #meuForm="ngForm" (ngSubmit)="onSubmit(meuForm)">
+            <mat-form-field appearance="outline">
+                <mat-label>Nome - ONG</mat-label>
+                <input 
+                    matInput 
+                    placeholder="Ex: Instituto Brasil - IB" 
+                    name="nome"
+                    ngModel
+                    #nomeControl="ngModel"
+                />
+                <mat-icon matSuffix>diversity_3</mat-icon>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input
+                    type="text"
+                    matInput 
+                    placeholder="ajuda.brasil@exemplo.com" 
+                    name="email" 
+                    required 
+                    ngModel
+                    #emailControl="ngModel"
+                    appEmailValidator
+                />
+                <mat-icon matSuffix>alternate_email</mat-icon>
+                <mat-hint>O email será usado para login.</mat-hint>
+                <mat-error *ngIf="emailControl.hasError('required')">O email <strong>deve ser preenchido</strong>.</mat-error>
+                <mat-error *ngIf="emailControl.hasError('invalidEmail') && !emailControl.hasError('required')">O email está <strong>fora do padrão</strong>.</mat-error>
+            </mat-form-field>
+            <div class="buttons-container">
+                <button type="submit" class="btn btn-warning btn-sm" [disabled]="meuForm.invalid">Finalizar
+                    Cadastro</button>
+            </div>
+        </form>
+    </div>
 </div>
