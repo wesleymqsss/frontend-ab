@@ -8,14 +8,39 @@
                 <mat-icon>dialpad</mat-icon>
                 <span>Página Inicial</span>
             </button>
-            <button mat-menu-item (click)="routerClick('/relatorio-ong')">
+
+            <button mat-menu-item [matMenuTriggerFor]="submenu1">
                 <mat-icon>voicemail</mat-icon>
-                <span>Relatório Ong</span>
+                <span>Login</span>
             </button>
-            <button mat-menu-item (click)="routerClick('/relatorio-empresa')">
-                <mat-icon>notifications_off</mat-icon>
-                <span>Relatorio Empresa</span>
+
+            <mat-menu #submenu1="matMenu">
+                <button mat-menu-item (click)="routerClick('/login')">
+                    <mat-icon>insert_drive_file</mat-icon>
+                    <span>Realizar login</span>
+                </button>
+                <button mat-menu-item (click)="routerClick('/form-ong')">
+                    <mat-icon>insert_drive_file</mat-icon>
+                    <span>Cadastrar-me</span>
+                </button>
+            </mat-menu>
+
+            <button mat-menu-item [matMenuTriggerFor]="submenu2" >
+                <mat-icon>voicemail</mat-icon>
+                <span>Painel Doação</span>
             </button>
+
+             <mat-menu #submenu2="matMenu">
+                <button mat-menu-item (click)="routerClick('/relatorio-ong')">
+                    <mat-icon>insert_drive_file</mat-icon>
+                    <span>Sou ONG</span>
+                </button>
+                <button mat-menu-item (click)="routerClick('/relatorio-empresa')">
+                    <mat-icon>insert_drive_file</mat-icon>
+                    <span>Sou Doador</span>
+                </button>
+            </mat-menu>
+
         </mat-menu>
         <div class="image-icos">
             <div class="img"></div>

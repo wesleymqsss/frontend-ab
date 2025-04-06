@@ -1,0 +1,55 @@
+<div class="form-container">
+    <div class="form">
+        <div class="form-header">
+            <span class="span-header"> Login </span>
+        </div>
+        <form #meuForm="ngForm" (ngSubmit)="onSubmit(meuForm)">
+            <div class="row">
+                <div class="gg-input">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input type="text" matInput placeholder="ajuda.brasil@exemplo.com" name="email" required ngModel
+                            #emailControl="ngModel" appEmailValidator />
+                        <mat-icon matSuffix>alternate_email</mat-icon>
+                        <mat-hint>realizar login.</mat-hint>
+                        <mat-error *ngIf="emailControl.hasError('required')">O email <strong>deve ser
+                                preenchido</strong>.</mat-error>
+                        <mat-error *ngIf="emailControl.hasError('invalidEmail') && !emailControl.hasError('required')">O
+                            email
+                            está <strong>fora do padrão</strong>.</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="gg-input">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Senha</mat-label>
+                        <input matInput [type]="hide() ? 'password' : 'text'" />
+                        <button mat-icon-button matSuffix (click)="clickEvent($event)"
+                            [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide()">
+                            <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field>
+                </div>
+            </div>
+            
+            <!-- <button type="button" (click)=" showToast()" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
+
+            <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+                <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
+                    <div class="toast-header">
+                        <img src="..." class="rounded me-2" alt="...">
+                        <strong class="me-auto">Bootstrap</strong>
+                        <small>11 mins ago</small>
+                        <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                    </div>
+                    <div class="toast-body">
+                        Hello, world! This is a toast message.
+                    </div>
+                </div>
+            </div> -->
+            <div class="buttons-container">
+                <button type="submit" class="btn btn-warning btn-sm" [disabled]="meuForm.invalid">Finalizar
+                    Cadastro</button>
+            </div>
+        </form>
+    </div>
+</div>

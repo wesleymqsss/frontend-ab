@@ -10,6 +10,7 @@ import { provideHttpClient } from '@angular/common/http';
 import { FormOngModule } from './pages/form-ong/form-ong.module';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { CustomErrorStateMatcher } from './utils/custom-error-state-matcher';
+import { LoginModule } from './pages/login/login.module';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { CustomErrorStateMatcher } from './utils/custom-error-state-matcher';
     HomeModule,
     RelatorioOngModule,
     FormOngModule,
+    LoginModule
     
   ],
   providers: [

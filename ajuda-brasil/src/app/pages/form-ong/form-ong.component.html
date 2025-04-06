@@ -7,13 +7,24 @@
             <div class="row">
                 <div class="big-input">
                     <mat-form-field appearance="outline">
-                        <mat-label>Nome - ONG</mat-label>
+                        <mat-label>Nome - ONG/Doador</mat-label>
                         <input matInput placeholder="Ex: Instituto Brasil - IB" name="nome" ngModel
                             #nomeControl="ngModel" />
                         <mat-icon matSuffix>diversity_3</mat-icon>
                     </mat-form-field>
                 </div>
                 <div class="big-input">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Selecione ONG ou Doador</mat-label>
+                        <mat-select name="tipo_perfil" [(ngModel)]="dataForm.tipo_perfil" #tipo_perfilControl="ngModel">
+                            <mat-option *ngFor="let food of foods" [value]="food.value">{{food.viewValue}}</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="gg-input">
                     <mat-form-field appearance="outline">
                         <mat-label>Email</mat-label>
                         <input type="text" matInput placeholder="ajuda.brasil@exemplo.com" name="email" required ngModel
