@@ -8,6 +8,7 @@ import { HomeModule } from './pages/home/home.module';
 import { MaterialModule } from './core/material/material.module';
 import { RelatorioOngModule } from './pages/relatorio-ong/relatorio-ong.module';
 import { provideHttpClient } from '@angular/common/http';
+import { FormOngComponent } from './pages/form-ong/form-ong.component';
 
 @NgModule({
   declarations: [

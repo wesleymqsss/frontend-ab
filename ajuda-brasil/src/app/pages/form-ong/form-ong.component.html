@@ -3,7 +3,7 @@
         <div class="form-header">
             <span class="span-header"> Realizar Cadastro </span>
         </div>
-        <form>
+        <form #meuForm="ngForm" (ngSubmit)="onSubmit(meuForm)">
             
         </form>
     </div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-form-ong',
@@ -8,4 +9,7 @@ import { Component } from '@angular/core';
 })
 export class FormOngComponent {
 
+onSubmit(form: NgForm){
+  
+}
 }
