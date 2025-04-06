@@ -6,6 +6,10 @@ import { HeaderComponent } from './header/header.component';
 import { Grafico1Component } from './grafico-1/grafico-1.component';
 import { Grafico2Component } from './grafico-2/grafico-2.component';
 import { ModalDetalhesComponent } from './modal-detalhes/modal-detalhes.component';
+import { FormsModule } from "@angular/forms";
+import { DirectivesModule } from "../directives/directives.module";
+import { PipesModule } from "../pipes/pipes.module";
+import { BrowserModule } from "@angular/platform-browser";
 
 @NgModule({
     declarations: [
@@ -18,13 +22,20 @@ import { ModalDetalhesComponent } from './modal-detalhes/modal-detalhes.componen
         CommonModule,
         MaterialModule,
         RouterModule,
+        FormsModule,
+        DirectivesModule,
+        PipesModule,
+        BrowserModule
 
     ],
     exports: [
         HeaderComponent,
         Grafico1Component,
         Grafico2Component,
-        ModalDetalhesComponent
+        ModalDetalhesComponent,
+        FormsModule,
+        DirectivesModule,
+        PipesModule
   
     ]
 })

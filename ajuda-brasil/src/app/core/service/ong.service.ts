@@ -19,6 +19,6 @@ export class OngService {
 
   ongDetails(cpfOrCnpj: string): Observable<OngDetails[]>{
     const params = new HttpParams().set('cpfOrCnpj', cpfOrCnpj);
-    return this.http.get<OngDetails[]>(this.apiUrlDetails, { params })
+    return this.http.get<OngDetails[]>(`${this.apiUrlDetails}`, { params })
   }
 }

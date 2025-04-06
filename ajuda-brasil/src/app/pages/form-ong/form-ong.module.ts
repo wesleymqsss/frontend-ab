@@ -4,7 +4,6 @@ import { MaterialModule } from '../../core/material/material.module';
 import { SharedModule } from '../../shared/shared.module';
 import { FormOngComponent } from './form-ong.component';
 import { FormOngRoutingModule } from './form-ong-routing.module';
-import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -15,7 +14,7 @@ import { FormsModule } from '@angular/forms';
     MaterialModule,
     SharedModule,
     FormOngRoutingModule,
-    FormsModule
+    
   ],
   exports: [
     FormOngComponent
