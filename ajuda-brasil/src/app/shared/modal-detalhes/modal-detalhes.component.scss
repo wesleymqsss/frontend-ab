@@ -1,0 +1,33 @@
+.buttons-container {
+    display: flex;
+    width: 40%;
+    justify-content: space-between;
+
+}
+
+.title-modal {
+    background-color: #ffc107;
+    justify-content: center;
+    display: flex;
+    
+
+    h2 {
+        color: #f5f5f5;
+        font-weight: 600;
+    }
+}
+p{
+    color: #078111
+}
+.lead{
+    font-size: 15px;
+}
+.detail {
+    font-size: 13px;
+    display: flex;
+
+    .datail-value {
+        margin-left: 3px;
+        color: #6e6e6e;
+    }
+}
