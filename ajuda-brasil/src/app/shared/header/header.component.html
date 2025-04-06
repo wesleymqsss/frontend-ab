@@ -1,13 +1,24 @@
-<div class="utils">    
+<div class="utils">
     <div class="container">
-        <div class="img"></div>
-        <div class="navegate">
-            <div class="nav-1"> <span>Home</span> </div>
-            <div class="nav-2"> <span>Relatório</span> </div>
-            <div class="nav-3"> <span>Home</span> </div>
-            <div class="nav-4"> <span>Home</span> </div>
-        </div>
+        <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon>more_vert</mat-icon>
+        </button>
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item (click)="routerClick('')">
+                <mat-icon>dialpad</mat-icon>
+                <span>Página Inicial</span>
+            </button>
+            <button mat-menu-item (click)="routerClick('/relatorio-ong')">
+                <mat-icon>voicemail</mat-icon>
+                <span>Relatório Ong</span>
+            </button>
+            <button mat-menu-item (click)="routerClick('/relatorio-empresa')">
+                <mat-icon>notifications_off</mat-icon>
+                <span>Relatorio Empresa</span>
+            </button>
+        </mat-menu>
         <div class="image-icos">
+            <div class="img"></div>
             <div class="image-1"></div>
             <div class="image-2"></div>
             <div class="image-3"></div>

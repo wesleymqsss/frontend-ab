@@ -1,22 +1,19 @@
 .utils {
     width: 100%;
     height: 7%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    background-color: #FFF;
+    background-color: #007924;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
 
 .container {
-    width: 80%;
+    width: 66%;
     height: 100%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     overflow: hidden;
 }
@@ -40,65 +37,90 @@
 }
 
 .img {
-    background-image: url('../../logo_ajudaBrasil.png');
+    background-image: url('../../ajuda_brasil_logo.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 50px;
-    width: 100px;
-    border-top: 19px solid #FFF;
+    height: 15%;
+    width: 118px;
+    background-color: transparent;
+    overflow: hidden;
+    position: absolute;
+    top: -25px;
+    right: 23%;
 
 }
 
+.img:hover {
+ cursor: pointer;
+    
+}
+
+
 .image-icos {
-    width: 10%;
-    height: 50px;
+    width: 50%;
+    height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
 
     .image-1 {
-        height: 20px;
-        width: 20px;
+        height: 23px;
+        width: 23px;
         background-image: url('../../icons8-instagram-100.png');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        padding: 1%;
     }
 
     .image-1:hover {
+        transition: 0.5s;
+        height: 24px;
+        width: 24px;
         background-color: #f3f5ec;
         cursor: pointer;
         border-radius: 3px;
     }
 
     .image-2 {
-        height: 20px;
-        width: 20px;
+        height: 23px;
+        width: 23px;
         background-image: url('../../icons8-x-96.png');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        padding: 1%;
     }
 
     .image-2:hover {
+        transition: 0.5s;
+        height: 24px;
+        width: 24px;
         background-color: #f3f5ec;
         cursor: pointer;
         border-radius: 2px;
     }
 
     .image-3 {
-        height: 20px;
-        width: 20px;
+        height: 23px;
+        width: 23px;
         background-image: url('../../icons8-rede-social-100.png');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+        padding: 1%;
     }
 
     .image-3:hover {
+        transition: 0.5s;
+        height: 24px;
+        width: 24px;
         background-color: #f3f5ec;
         cursor: pointer;
         border-radius: 2px;
     }
+}
+mat-icon{
+    color: #f6fce3;
 }

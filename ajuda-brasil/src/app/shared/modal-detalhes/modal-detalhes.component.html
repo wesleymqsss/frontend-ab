@@ -1,0 +1,44 @@
+<div class="title-modal">
+    <h2 mat-dialog-title> {{this.dataSource.nome | uppercase}}</h2>
+</div>
+<mat-dialog-content>
+    <p class="h4">Endereço</p>
+    <div class="detail">
+        <span class="lead">Cidade: </span>
+        <p class="datail-value"> {{dataSource.nome}} </p>
+    </div>
+    <div class="detail">
+        <span class="lead">Estado: </span>
+        <p class="datail-value"> {{dataSource.estado}} </p>
+    </div>
+    <div class="detail">
+        <span class="lead">Número: </span>
+        <p class="datail-value"> {{dataSource.numero}}</p>
+    </div>
+    <div class="detail">
+        <span class="lead">Refêrencia: </span>
+        <p class="datail-value">{{dataSource.refenrencia_endereco}}</p>
+    </div>
+    <p class="h4">Contato</p>
+    <div class="detail">
+        <span class="lead">Email: </span>
+        <p class="datail-value">{{dataSource.email}}</p> 
+    </div>
+    <div class="detail">
+        <span class="lead">Telefone:  </span>
+        <p class="datail-value">{{dataSource.telefone}}</p>
+    </div>
+
+    <p class="h4">Sobre nós </p>
+    <div class="detail">
+        <span class="lead">Nossa Missão: </span>
+        <p class="datail-value">{{this.dataSource.sobreNos}} </p>
+    </div>
+
+</mat-dialog-content>
+<mat-dialog-actions>
+    <div class="buttons-container">
+        <button type="button" class="btn btn-success btn-sm" (click)="close()">Cancelar</button>
+        <button type="button" class="btn btn-warning btn-sm">Realizar Doação</button>
+    </div>
+</mat-dialog-actions>
