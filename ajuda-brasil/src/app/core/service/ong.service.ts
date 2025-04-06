@@ -17,8 +17,14 @@ export class OngService {
     return this.http.get<Ong[]>(this.apiUrl);
   }
 
+  ongCreate(newOng: Ong): Observable<Ong>{
+    return this.http.post<Ong>(this.apiUrl, newOng);
+  }
+
   ongDetails(cpfOrCnpj: string): Observable<OngDetails[]>{
     const params = new HttpParams().set('cpfOrCnpj', cpfOrCnpj);
     return this.http.get<OngDetails[]>(`${this.apiUrlDetails}`, { params })
   }
+
+
 }
