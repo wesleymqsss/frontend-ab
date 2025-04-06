@@ -10,6 +10,7 @@ import { FormsModule } from "@angular/forms";
 import { DirectivesModule } from "../directives/directives.module";
 import { PipesModule } from "../pipes/pipes.module";
 import { BrowserModule } from "@angular/platform-browser";
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
     declarations: [
@@ -25,7 +26,8 @@ import { BrowserModule } from "@angular/platform-browser";
         FormsModule,
         DirectivesModule,
         PipesModule,
-        BrowserModule
+        BrowserModule,
+        NgbModule
 
     ],
     exports: [

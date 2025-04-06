@@ -6,7 +6,9 @@ export interface Ong {
     telefone: string,
     cidade: string,
     tipo_doacao: string,
-    valor: number
+    tipo_perfil: number,
+    valor: number,
+    senha: string
 }
 
 export interface OngDetails {

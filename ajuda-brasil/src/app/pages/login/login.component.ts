@@ -1,31 +1,17 @@
+declare const bootstrap: any;
 import { Component, signal } from '@angular/core';
-import { NgForm } from '@angular/forms';
 import { OngService } from '../../core/service/ong.service';
 import { SnackBarService } from '../../core/service/snack-bar.service';
-
-interface Food {
-  value: number;
-  viewValue: string;
-}
+import { NgForm } from '@angular/forms';
 
 
 @Component({
-  selector: 'app-form-ong',
+  selector: 'app-login',
   standalone: false,
-  templateUrl: './form-ong.component.html',
-  styleUrl: './form-ong.component.scss',
-
+  templateUrl: './login.component.html',
+  styleUrl: './login.component.scss'
 })
-export class FormOngComponent {
-  foods: Food[] = [
-    { value: 1, viewValue: 'Sou ONG' },
-    { value: 2, viewValue: ' Sou Doador' },
-  ];
-
-  dataForm = {
-    tipo_perfil: null,
-  };
-
+export class LoginComponent {
   constructor(
     private readonly ongService: OngService,
     private readonly _snackBarService: SnackBarService
@@ -49,6 +35,14 @@ export class FormOngComponent {
           console.log('error ao enviar os dados', err)
         }
       })
+    }
+  }
+
+  showToast(): void {
+    const toastElement = document.getElementById('liveToast'); 
+    if (toastElement) {
+     const toast = new bootstrap.Toast(toastElement); 
+      toast.show();
     }
   }
 }

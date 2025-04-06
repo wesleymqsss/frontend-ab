@@ -33,3 +33,11 @@ tr:hover {
     background-color: #ececec;
 }
 
+#mat-snack-bar-container-live-0 > div > simple-snack-bar > div.mat-mdc-snack-bar-label.mdc-snackbar__label, .mat-mdc-snack-bar-actions , .mat-mdc-snack-bar-container .mat-mdc-snackbar-surface{
+    background-color: #007924 !important;
+    font-weight: bold;
+}
+.mat-mdc-snack-bar-container .mat-mdc-button.mat-mdc-snack-bar-action{
+    color: #FFF !important;
+    font-weight: bold;
+}
