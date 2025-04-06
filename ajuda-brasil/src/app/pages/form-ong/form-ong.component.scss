@@ -21,3 +21,14 @@
     align-items: center;
     justify-content: center;
 }
+
+.buttons-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+
+    .btn-warning {
+        color: #595959;
+        font-weight: 600;
+    }
+}
