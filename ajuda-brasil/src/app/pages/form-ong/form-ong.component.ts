@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 
@@ -10,6 +10,11 @@ import { NgForm } from '@angular/forms';
 
 })
 export class FormOngComponent {
+  hide = signal(true);
+  clickEvent(event: MouseEvent) {
+    this.hide.set(!this.hide());
+    event.stopPropagation();
+  }
 
 onSubmit(form: NgForm){
 

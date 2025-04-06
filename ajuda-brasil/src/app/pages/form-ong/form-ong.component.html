@@ -4,34 +4,98 @@
             <span class="span-header"> Realizar Cadastro </span>
         </div>
         <form #meuForm="ngForm" (ngSubmit)="onSubmit(meuForm)">
-            <mat-form-field appearance="outline">
-                <mat-label>Nome - ONG</mat-label>
-                <input 
-                    matInput 
-                    placeholder="Ex: Instituto Brasil - IB" 
-                    name="nome"
-                    ngModel
-                    #nomeControl="ngModel"
-                />
-                <mat-icon matSuffix>diversity_3</mat-icon>
-            </mat-form-field>
-            <mat-form-field appearance="outline">
-                <mat-label>Email</mat-label>
-                <input
-                    type="text"
-                    matInput 
-                    placeholder="ajuda.brasil@exemplo.com" 
-                    name="email" 
-                    required 
-                    ngModel
-                    #emailControl="ngModel"
-                    appEmailValidator
-                />
-                <mat-icon matSuffix>alternate_email</mat-icon>
-                <mat-hint>O email será usado para login.</mat-hint>
-                <mat-error *ngIf="emailControl.hasError('required')">O email <strong>deve ser preenchido</strong>.</mat-error>
-                <mat-error *ngIf="emailControl.hasError('invalidEmail') && !emailControl.hasError('required')">O email está <strong>fora do padrão</strong>.</mat-error>
-            </mat-form-field>
+            <div class="row">
+                <div class="big-input">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Nome - ONG</mat-label>
+                        <input matInput placeholder="Ex: Instituto Brasil - IB" name="nome" ngModel
+                            #nomeControl="ngModel" />
+                        <mat-icon matSuffix>diversity_3</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="big-input">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Email</mat-label>
+                        <input type="text" matInput placeholder="ajuda.brasil@exemplo.com" name="email" required ngModel
+                            #emailControl="ngModel" appEmailValidator />
+                        <mat-icon matSuffix>alternate_email</mat-icon>
+                        <mat-hint>O email será usado para login.</mat-hint>
+                        <mat-error *ngIf="emailControl.hasError('required')">O email <strong>deve ser
+                                preenchido</strong>.</mat-error>
+                        <mat-error *ngIf="emailControl.hasError('invalidEmail') && !emailControl.hasError('required')">O
+                            email
+                            está <strong>fora do padrão</strong>.</mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="small-input">
+                    <mat-form-field appearance="outline">
+                        <mat-label>CPF ou CNPJ</mat-label>
+                        <input matInput placeholder="Ex: 000-000-000.00" name="cpfOrCnpj" ngModel
+                            #cpfOrCnpjControl="ngModel" required />
+                        <mat-icon matSuffix>fingerprint</mat-icon>
+                        <mat-error type="text" *ngIf="cpfOrCnpjControl.hasError('required')">CPF/CNPJ <strong>deve ser
+                                preenchido</strong>.</mat-error>
+                    </mat-form-field>
+                </div>
+                <div class="small-input">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Telefone</mat-label>
+                        <input type="text" matInput placeholder="Ex: 61-00000-0000" name="telefone" ngModel
+                            #telefoneControl="ngModel" />
+                        <mat-icon matSuffix>phone_in_talk</mat-icon>
+                    </mat-form-field>
+                </div>
+                <div class="small-input">
+                    <mat-form-field appearance="outline">
+                        <mat-label>CEP</mat-label>
+                        <input type="text" matInput placeholder="Ex: 70000-00" name="cep" ngModel #cepControl="ngModel"
+                            required />
+                        <mat-icon matSuffix>my_location</mat-icon>
+                        <mat-error *ngIf="cepControl.hasError('required')">CEP <strong>deve ser
+                                preenchido</strong>.</mat-error>
+                    </mat-form-field>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="small-input">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Cidade</mat-label>
+                        <input matInput placeholder="Ex: Instituto Brasil - IB" name="cidade" ngModel
+                            #cidadeControl="ngModel" />
+                        <mat-icon matSuffix>location_city</mat-icon>
+                    </mat-form-field>
+                </div>
+
+                <div class="small-input">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Cadastrar senha</mat-label>
+                        <input name="senha" ngModel #senhaControl="ngModel" matInput
+                            [type]="hide() ? 'password' : 'text'" required />
+                        <button mat-icon-button matSuffix (click)="clickEvent($event)"
+                            [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide()">
+                            <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                        <mat-error *ngIf="senhaControl.hasError('required')">Campo senha <strong>deve ser
+                                preenchido</strong>.</mat-error>
+                    </mat-form-field>
+                </div>
+
+                <div class="small-input">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Confirmar senha</mat-label>
+                        <input matInput [type]="hide() ? 'password' : 'text'" />
+                        <button mat-icon-button matSuffix (click)="clickEvent($event)"
+                            [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide()">
+                            <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
+                        </button>
+                    </mat-form-field>
+                </div>
+            </div>
+
             <div class="buttons-container">
                 <button type="submit" class="btn btn-warning btn-sm" [disabled]="meuForm.invalid">Finalizar
                     Cadastro</button>
