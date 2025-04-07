@@ -93,7 +93,7 @@
       "telefone": "61 8877-3345",
       "cidade": "Planaltina",
       "tipo_doacao": "Ração e brinquedos",
-      "senha": "",
+      "senha": "chamanabota1234",
       "id": "0e41"
     },
     {
@@ -201,6 +201,22 @@
     },
     {
       "id": "840b",
+      "email": "rodrigo.pacheco"
+    },
+    {
+      "id": "215d",
+      "email": "rodrigo.pacheco"
+    },
+    {
+      "id": "daf4",
+      "email": "rodrigo.pacheco"
+    },
+    {
+      "id": "d744",
+      "email": "rodrigo.pacheco"
+    },
+    {
+      "id": "758b",
       "email": "rodrigo.pacheco"
     }
   ],
@@ -384,6 +400,20 @@
       "estado": "DF - Distrito Federal",
       "sobreNos": "Acolhemos animais vítimas de maus-tratos.",
       "id": "d7d6"
+    }
+  ],
+  "login": [
+    {
+      "id": "0e41",
+      "email": "novavida@gmail.com",
+      "senha": "chamanabota1234",
+      "tipo_perfil": 1
+    },
+    {
+      "id": "cb0c",
+      "email": "protecaonimal@gmail.com",
+      "senha": "alobb9900000",
+      "tipo_perfil": 0
     }
   ]
 }

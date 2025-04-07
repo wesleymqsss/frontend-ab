@@ -8,12 +8,12 @@ import { LoginComponent } from './pages/login/login.component';
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    component: LoginComponent
 
   },
-    {
-    path: 'login',
-    component: LoginComponent
+  {
+    path: 'pagina-inicial',
+    component: HomeComponent
 
   },
   {

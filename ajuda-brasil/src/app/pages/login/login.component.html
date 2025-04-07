@@ -22,7 +22,8 @@
                 <div class="gg-input">
                     <mat-form-field appearance="outline">
                         <mat-label>Senha</mat-label>
-                        <input matInput [type]="hide() ? 'password' : 'text'" />
+                        <input matInput #senhaControl="ngModel" ngModel name="senha"
+                            [type]="hide() ? 'password' : 'text'" />
                         <button mat-icon-button matSuffix (click)="clickEvent($event)"
                             [attr.aria-label]="'Hide password'" [attr.aria-pressed]="hide()">
                             <mat-icon>{{hide() ? 'visibility_off' : 'visibility'}}</mat-icon>
@@ -30,26 +31,33 @@
                     </mat-form-field>
                 </div>
             </div>
-            
-            <!-- <button type="button" (click)=" showToast()" class="btn btn-primary" id="liveToastBtn">Show live toast</button>
 
-            <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+            <div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11;">
                 <div id="liveToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
-                    <div class="toast-header">
-                        <img src="..." class="rounded me-2" alt="...">
-                        <strong class="me-auto">Bootstrap</strong>
-                        <small>11 mins ago</small>
+                    <div class="toast-header color-Toast-header">
+                        <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="error"></mat-icon>
+                        <strong class="me-auto">Usuário não encontrado</strong>
+                        <small>{{ this.dateNow()}}</small>
                         <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
                     </div>
-                    <div class="toast-body">
-                        Hello, world! This is a toast message.
+                    <div class="toast-body color-Toast-body">
+                        Não existe login para este e-mail.
                     </div>
                 </div>
-            </div> -->
-            <div class="buttons-container">
-                <button type="submit" class="btn btn-warning btn-sm" [disabled]="meuForm.invalid">Finalizar
-                    Cadastro</button>
             </div>
+            <div class="buttons-container">
+                <div class="button-2">
+                    <button type="button-2" class="btn btn-success btn-sm"
+                        (click)="routerClick('/form-ong')">Cadastrar-me</button>
+                </div>
+                <div class="button-1">
+                    <button type="submit" class="btn btn-warning btn-sm" [disabled]="meuForm.invalid"> Login
+                    </button>
+                </div>
+
+            </div>
+
         </form>
     </div>
 </div>
+<app-header *ngIf="false" [userLogado]="usuarioLogadoInput"></app-header>

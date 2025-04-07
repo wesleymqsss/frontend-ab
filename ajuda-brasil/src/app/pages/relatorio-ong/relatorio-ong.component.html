@@ -9,9 +9,9 @@
       <div class="table">
          <div class="pesquisar-input">
             <mat-form-field class="custom-input">
-            <mat-label>Filtrar</mat-label>
-            <input matInput (keyup)="applyFilter($event)" placeholder="Ex: Nome" #input>
-         </mat-form-field>
+               <mat-label>Filtrar</mat-label>
+               <input matInput (keyup)="applyFilter($event)" placeholder="Ex: Nome" #input >
+            </mat-form-field>
          </div>
          <div class="mat-elevation-z8">
             <table mat-table [dataSource]="dataSource" matSort>
