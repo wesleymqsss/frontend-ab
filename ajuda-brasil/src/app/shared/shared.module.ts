@@ -37,7 +37,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
         ModalDetalhesComponent,
         FormsModule,
         DirectivesModule,
-        PipesModule
+        PipesModule,
   
     ]
 })
