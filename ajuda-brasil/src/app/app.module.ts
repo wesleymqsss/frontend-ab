@@ -11,6 +11,7 @@ import { FormOngModule } from './pages/form-ong/form-ong.module';
 import { ErrorStateMatcher } from '@angular/material/core';
 import { CustomErrorStateMatcher } from './utils/custom-error-state-matcher';
 import { LoginModule } from './pages/login/login.module';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,9 @@ import { LoginModule } from './pages/login/login.module';
     HomeModule,
     RelatorioOngModule,
     FormOngModule,
-    LoginModule
+  
+    CommonModule,
+    LoginModule, 
     
   ],
   providers: [
